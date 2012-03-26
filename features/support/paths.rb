@@ -24,6 +24,8 @@ module NavigationHelpers
       case ($1)
         when "edit"
         "#{details_path}/edit"
+        when "details"
+        details_path
       end
 
     # Add more mappings here.
