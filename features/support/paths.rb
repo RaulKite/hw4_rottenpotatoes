@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the RottenPotatoes home page$/
       'movies'
 
+    when /^the Create New Movie page$/
+      'movies/new'
+
     when /^the (.*) page for "(.*)"$/
       #m = Movie.find_by_title("$1")
       #edit_path(m)
