@@ -16,6 +16,8 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/movies'
 
+    when /^the RottenPotatoes home page$/
+      'movies'
 
     when /^the (.*) page for "(.*)"$/
       #m = Movie.find_by_title("$1")
