@@ -14,7 +14,7 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      '/movies'
 
 
     when /^the (.*) page for "(.*)"$/
@@ -23,9 +23,11 @@ module NavigationHelpers
       details_path = "/movies/#{Movie.find_by_title($2).id}"
       case ($1)
         when "edit"
-        "#{details_path}/edit"
+          "#{details_path}/edit"
         when "details"
-        details_path
+          details_path
+        when "Similar Movies"
+          "#{details_path}/search_director"
       end
 
     # Add more mappings here.
